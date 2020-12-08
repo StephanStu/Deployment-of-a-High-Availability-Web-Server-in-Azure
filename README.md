@@ -21,7 +21,7 @@ Terraform must be given necessary credentials in Azure in order to be able so sp
 
 * Create a service principle in Azure for Terraform.
 * Run `az login` to log into your Azure account. Now get the tenant-id by running `az account show`. Paste the tenant id as `default = "XXX"` into vars.tf in the tenant_id-section.
-* Run `terraform init` to get started. Terraform will now draw necessary packages, as successful init will return *Terraform has been successfully initialized!*.
+* Run `terraform init` to get started. Terraform will now draw necessary packages, a successful init will return *Terraform has been successfully initialized!*.
 
 Packer must be given necessary credentials in Azure, too. To create a service principle in Azure for Packer as explained [here](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/build-image-with-packer),   
 * Run `$ az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, tenant_id: tenant }"`.
