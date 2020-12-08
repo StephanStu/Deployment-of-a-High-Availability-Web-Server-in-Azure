@@ -19,7 +19,7 @@
 		"managed_image_resource_group_name": "udacity-devops-4-azure-nanodegree",
     "managed_image_name": "image",
 		"location": "West Europe",
-    "vm_size": "Standard_DS3_v2"
+    "vm_size": "Standard_A1_v2"
 	}],
 	"provisioners": [{
 		"inline": [
