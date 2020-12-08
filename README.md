@@ -20,7 +20,8 @@ After installing all tools listed in the Dependencies-section, run the following
 Terraform must be given necessary credentials in Azure in order to be able so spawn resources as defined in the artifacts.
 
 * Create a service principle in Azure for Terraform.
-* Run terraform
+* Run `az login` to log into your Azure account. Now get the tenant-id by running `az account show`. Paste the tenant id as `default = "XXX"` into vars.tf in the tenant_id-section.
+* Run `terraform init` to get started. Terraform will now draw necessary packages, as successful init will return *Terraform has been successfully initialized!*.
 
 Packer must be given necessary credentials in Azure, too. To create a service principle in Azure for Packer as explained [here](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/build-image-with-packer),   
 * Run `$ az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, tenant_id: tenant }"`.
@@ -30,6 +31,15 @@ Packer must be given necessary credentials in Azure, too. To create a service pr
 
 
 ### 2. Create your infrastructure as code
+This section explains hot to provision the infrastructure for the high-availability web server in Azure.
+Create the resource group first, such that it is ready for Packer to deploy the virtual machine image by running `az group create --name udacity-devops-4-azure-nanodegree --location "West Europe" --tags "project=udacity-devops-4-azure-nanodegree"`.
+
+
+`terraform init` (if you have not already)
+`terraform plan`
+`terraform apply`
+`terraform show`
+`terraform destroy`
 
 ### 3. Inspect your infrastructure in Microsoft Azure
 
