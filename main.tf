@@ -123,7 +123,7 @@ resource "azurerm_virtual_machine" "main" {
  availability_set_id   = azurerm_availability_set.main.id
  resource_group_name   = azurerm_resource_group.main.name
  network_interface_ids = [element(azurerm_network_interface.main.*.id, count.index)]
- vm_size               = "Standard_DS3_v2"
+ vm_size               = "Standard_A1_v2"
 
  storage_image_reference {
    publisher = "Canonical"
