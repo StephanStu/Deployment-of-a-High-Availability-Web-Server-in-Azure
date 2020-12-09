@@ -45,7 +45,15 @@ This section explains hot to provision the infrastructure for the high-availabil
 * Create the infrastructure in Azure by running `$ terraform apply`
 
 ### 3. Inspect your infrastructure in Microsoft Azure
-The creation of the infrastructure takes a few minutes. You can inspect the result in the portal by going to resource groups and search for the recently created group. As an alternative, run `$ terraform show` and the infrastructure will be displayed in convenient json-format.
+The creation of the infrastructure takes a few minutes. You can inspect the result in the portal by going to resource groups and search for the recently created resource groups.
+
+In Azure's portal you will be able to inspect the majority of objects by selecting the  resource group `udacity-devops-4-azure-nanodegree` visible in the figure below.
+
+![resource-group-4-resources](resource-group-4-resources.png)
+
+As an alternative, run `$ terraform show` and the infrastructure will be displayed in convenient json-format. In Azure's portal you will be able to inspect the image by selecting the  resource group `images-4-udacity-devops-4-azure-nanodegree` visible in the figure below.
+
+![resource-group-4-images](resource-group-4-images.png)
 
 ### 4. Destroy your infrastructure in Microsoft Azure
 The infrastructure is deleted by removing both the stack created by terraform and the image from Azure. These activities are wrapped up in a shell script. To clean up Azure, run `$ chmod u+x clean_up_Azure.sh && ./clean_up_Azure.sh`
