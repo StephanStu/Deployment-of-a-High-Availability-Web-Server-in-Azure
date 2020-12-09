@@ -23,11 +23,15 @@ variable "admin_password" {
 }
 
 variable "project_tag_value" {
-  description = "Each taggable resource will have the project tag. Each project tag will take this value. This way we can track resources associated with this project."
+  description = "Each resource that can be tagged will have this project tag (enforced by policy!). Each project tag will take this value. This way we can track resources associated with this project."
   default = "udacity-devops-4-azure-nanodegree"
 }
 
 variable "number_of_virtual_machines" {
   description = "This is the number of virtual machines that must be created."
   default = 2
+}
+
+variable "image_id"{
+  description = "This is the id of the image that was generated & deployed by packer. Get it by running `az image list` and look for id : /subscriptions/...providers/Microsoft.Compute/..."
 }

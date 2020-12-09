@@ -126,10 +126,7 @@ resource "azurerm_virtual_machine" "main" {
  vm_size               = "Standard_A1_v2"
 
  storage_image_reference {
-   publisher = "Canonical"
-   offer     = "UbuntuServer"
-   sku       = "18.04-LTS"
-   version   = "latest"
+   id        = "${var.image_id}" 
  }
 
  os_profile {
